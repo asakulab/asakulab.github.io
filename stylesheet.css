@@ -33,7 +33,7 @@ main {
 
 nav {
   grid-area: left;
-  background-color: #00FF0050;
+  background-color: #00FF00;
 }
 
 aside {
