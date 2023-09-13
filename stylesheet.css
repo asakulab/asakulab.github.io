@@ -5,7 +5,7 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template:
-    "header header header" 200px
+    "header header header" 80px
     "left   center right " 1fr
     "footer footer footer" 200px
     / 200px 1fr 200px;
@@ -13,6 +13,7 @@ body {
 
 header {
   grid-area: header;
+  background-color: #C0C0C0;
 }
 
 main {
@@ -34,7 +35,7 @@ footer {
 @media (max-width: 960px) {
   body {
     grid-template:
-      "header" 200px
+      "header" 80px
       "center" 1fr
       "left "
       "right "
@@ -52,7 +53,7 @@ footer {
   justify-content: center;
   align-items: center;
   z-index: 90;
-  background-color: #3584bb;
+  background-color: gray;
 }
 
 .menu-btn span,
@@ -145,7 +146,7 @@ footer {
   /*leftの値を変更してメニューを画面外へ*/
   z-index: 80;
   background-color: #3584bb;
-  transition: all 0.5s;
+  transition: all 0.2s;
   /*アニメーション設定*/
 }
 
