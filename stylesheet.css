@@ -33,14 +33,17 @@ main {
 
 nav {
   grid-area: left;
+  background-color: #00FF0050;
 }
 
 aside {
   grid-area: right;
+  background-color: #0000FF50;
 }
 
 footer {
   grid-area: footer;
+  background-color: #FF000050;
 }
 
 @media (max-width: 960px) {
@@ -54,7 +57,7 @@ footer {
   }
 }
 
-.menu-btn {
+.menu-btn2 {
   position: fixed;
   top: 10px;
   right: 10px;
@@ -67,9 +70,9 @@ footer {
   background-color: gray;
 }
 
-.menu-btn span,
-.menu-btn span:before,
-.menu-btn span:after {
+.menu-btn2 span,
+.menu-btn2 span:before,
+.menu-btn2 span:after {
   content: '';
   display: block;
   height: 3px;
@@ -79,34 +82,34 @@ footer {
   position: absolute;
 }
 
-.menu-btn span:before {
+.menu-btn2 span:before {
   bottom: 8px;
 }
 
-.menu-btn span:after {
+.menu-btn2 span:after {
   top: 8px;
 }
 
-#menu-btn-check:checked~.menu-btn span {
+#menu-btn2-check:checked~.menu-btn2 span {
   background-color: rgba(255, 255, 255, 0);
   /*メニューオープン時は真ん中の線を透明にする*/
 }
 
-#menu-btn-check:checked~.menu-btn span::before {
+#menu-btn2-check:checked~.menu-btn2 span::before {
   bottom: 0;
   transform: rotate(45deg);
 }
 
-#menu-btn-check:checked~.menu-btn span::after {
+#menu-btn2-check:checked~.menu-btn2 span::after {
   top: 0;
   transform: rotate(-45deg);
 }
 
-#menu-btn-check {
+#menu-btn2-check {
   display: none;
 }
 
-.menu-content {
+.menu-content2 {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -116,16 +119,16 @@ footer {
   background-color: #3584bb;
 }
 
-.menu-content ul {
+.menu-content2 ul {
   padding: 70px 10px 0;
 }
 
-.menu-content ul li {
+.menu-content2 ul li {
   border-bottom: solid 1px #ffffff;
   list-style: none;
 }
 
-.menu-content ul li a {
+.menu-content2 ul li a {
   display: block;
   width: 100%;
   font-size: 15px;
@@ -136,7 +139,7 @@ footer {
   position: relative;
 }
 
-.menu-content ul li a::before {
+.menu-content2 ul li a::before {
   content: "";
   width: 7px;
   height: 7px;
@@ -148,7 +151,7 @@ footer {
   top: 16px;
 }
 
-.menu-content {
+.menu-content2 {
   width: 70%;
   height: 100%;
   position: fixed;
@@ -161,7 +164,7 @@ footer {
   /*アニメーション設定*/
 }
 
-#menu-btn-check:checked~.menu-content {
+#menu-btn2-check:checked~.menu-content2 {
   right: 0;
   /*メニューを画面内へ*/
 }
@@ -201,22 +204,22 @@ footer {
   top: 8px;
 }
 
-#menu-btn-check1:checked~.menu-btn1 span {
+#menu-btn1-check:checked~.menu-btn1 span {
   background-color: rgba(255, 255, 255, 0);
   /*メニューオープン時は真ん中の線を透明にする*/
 }
 
-#menu-btn-check1:checked~.menu-btn1 span::before {
+#menu-btn1-check:checked~.menu-btn1 span::before {
   bottom: 0;
   transform: rotate(45deg);
 }
 
-#menu-btn-check1:checked~.menu-btn1 span::after {
+#menu-btn1-check:checked~.menu-btn1 span::after {
   top: 0;
   transform: rotate(-45deg);
 }
 
-#menu-btn-check1 {
+#menu-btn1-check {
   display: none;
 }
 
@@ -275,7 +278,7 @@ footer {
   /*アニメーション設定*/
 }
 
-#menu-btn-check1:checked~.menu-content1 {
+#menu-btn1-check:checked~.menu-content1 {
   left: 0;
   /*メニューを画面内へ*/
 }
