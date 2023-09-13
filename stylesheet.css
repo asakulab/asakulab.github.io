@@ -149,7 +149,7 @@ footer {
   /*アニメーション設定*/
 }
 
- #menu-btn-check:checked~.menu-content {
+#menu-btn-check:checked~.menu-content {
   left: 0;
   /*メニューを画面内へ*/
 }
