@@ -33,7 +33,7 @@ main {
 
 nav {
   grid-area: left;
-  background-color: #00FF00;
+  background-color: #00FF0050;
 }
 
 aside {
@@ -159,7 +159,7 @@ footer {
   right: -100%;
   /*leftの値を変更してメニューを画面外へ*/
   z-index: 80;
-  background-color: #3584bb;
+  background-color: #008830;
   transition: all 0.2s;
   /*アニメーション設定*/
 }
@@ -168,6 +168,7 @@ footer {
   right: 0;
   /*メニューを画面内へ*/
 }
+
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
