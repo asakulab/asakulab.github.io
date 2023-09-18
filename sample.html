@@ -37,7 +37,7 @@
                                 </label>
                                 <input type="message2" class="form-control" id="test2" style="height: 100px">
                             </div>
-                            　 <div class="form-group">
+                            <div class="form-group">
                                 <input type="submit" class="btn bg-danger" value="送信" aria-describedby="btn-tip">
                             </div>
                             <div class="form-check form-switch">
@@ -124,36 +124,41 @@
                 }
             </style>
             
-            <script>
-                function updateTime() {
-                    const hoursElement = document.getElementById("hours");
-                    const minutesElement = document.getElementById("minutes");
-                    const secondsElement = document.getElementById("seconds");
-                    const currentTime = new Date();
-                    const hours = currentTime.getHours().toString().padStart(2, "0");
-                    const minutes = currentTime.getMinutes().toString().padStart(2, "0");
-                    const seconds = currentTime.getSeconds().toString().padStart(2, "0");
-                    hoursElement.textContent = hours;
-                    minutesElement.textContent = minutes;
-                    secondsElement.textContent = seconds;
-                }
-
-                // ページが読み込まれたら初期表示を行う
-                updateTime();
-
-                // 1秒ごとに時間を更新する
-                setInterval(updateTime, 1000);
-            </script>
-
+                <div class="container ms-3">
+                    <div class="stopwatch badge bg-info display-4" style="width: 220px;">
+            <span class="digit" id="hoursDisplay">00</span> :
+            <span class="digit" id="minutesDisplay">00</span> :
+            <span class="digit" id="secondsDisplay">00</span>
+            </div>
+            <div>
+                <button class="btn btn-primary ms-2" id="startButton">始</button>
+                <button class="btn btn-danger" id="stopButton">終</button>
+                <button class="btn btn-warning" id="resetButton">リセ</button>
+                <button class="btn btn-success" id="resetButton2">送信</button>
+                    </div>
+                </div>
+                    <style>
+                        .stopwatch {
+                            font-size: 1.5rem;
+                        }
+                    
+                        .digit {
+                            width: 2rem;
+                            /* 数字の幅を固定 */
+                            text-align: center;
+                            display: inline-block;
+                            margin-right: 5px;
+                        }
+                    </style>
         </div>
         <div class="counter">
                 <div class="row justify-content-center">
                     <div class="col-md-4">
-                        <div class="card text-center">
+                        <div class="card text-center bg-secondary">
                             <div class="card-body">
-                                <h2 id="counter">0</h2>
+                                <h2 id="counter" class="text-light">0</h2>
                                 <button id="increment" class="btn btn-primary" style="width: 65px;">+</button>
-                                <button id="decrement" class="btn btn-secondary"style="width: 30px;">-</button>
+                                <button id="decrement" class="btn btn-dark"style="width: 30px;">-</button>
                                 <button id="reset" class="btn btn-danger" style="width: 30px;">/</button>
                                 <button id="submit" class="btn btn-success" style="width: 65px;">送信</button>
                             </div>
