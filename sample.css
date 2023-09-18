@@ -39,15 +39,15 @@ aside {
 }
 .timer {
     grid-area: timer;
-    background-color: #fff27c;
+    /* background-color: #fff27c; */
 }
 .counter {
     grid-area: counter;
-    background-color: #7cffae;
+    /* background-color: #7cffae; */
 }
 .footC {
     grid-area: footC;
-    background-color: #3022aa;
+    /* background-color: #3022aa; */
 }
 
 /* スマホ仕様配置および変更 */
