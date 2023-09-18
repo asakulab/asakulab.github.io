@@ -312,3 +312,21 @@ aside {
     margin: -25px 0 0 -100px;
     /* 完全に中央に配置するため、上・左の margin を負の数に設定 */
 }
+
+/* グラフ用 */
+#chartContainer {
+    position: fixed;
+    top: 10%;
+    left: 25%;
+    width: 50%;
+    height: 40%;
+}
+@media not (min-aspect-ratio: 1) {
+    #chartContainer {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        width: 90%;
+        height: 30%;
+    }
+}

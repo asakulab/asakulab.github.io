@@ -91,4 +91,7 @@ function updateTime() {
                 updateTime();
 
                 // 1秒ごとに時間を更新する
-                setInterval(updateTime, 1000);
+setInterval(updateTime, 1000);
+                
+// グラフ
+
