@@ -100,8 +100,10 @@
                         <input type="submit" class="btn" value="send" aria-describedby="btn-tip">
                     </div>
         </div>
+<!-- タイマー -->
         <div class="timer">
-            <span id="current-time" class="badge bg-primary display-4" style="width: 260px;">
+    <!-- 時間 -->
+            <span id="current-time" class="badge bg-primary display-4 ms-2" style="width: 230px;">
                 <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
             </span>
             
@@ -114,7 +116,6 @@
                     white-space: nowrap;
                     overflow: hidden;
                 }
-            
                 #hours,
                 #minutes,
                 #seconds {
@@ -123,44 +124,44 @@
                     display: inline-block;
                 }
             </style>
-            
-                <div class="container ms-3">
-                    <div class="stopwatch badge bg-info display-4" style="width: 220px;">
-            <span class="digit" id="hoursDisplay">00</span> :
-            <span class="digit" id="minutesDisplay">00</span> :
-            <span class="digit" id="secondsDisplay">00</span>
+    <!-- ストップウォッチ -->
+            <div class="container ms-3">
+                <div class="stopwatch badge bg-info display-4 ms-1" style="width: 190px;">
+                <span class="digit" id="hoursDisplay">00</span> :
+                <span class="digit" id="minutesDisplay">00</span> :
+                <span class="digit" id="secondsDisplay">00</span>
             </div>
             <div>
-                <button class="btn btn-primary ms-2" id="startButton">始</button>
+                <button class="btn btn-primary" id="startButton">始</button>
                 <button class="btn btn-danger" id="stopButton">終</button>
                 <button class="btn btn-warning" id="resetButton">リセ</button>
                 <button class="btn btn-success" id="resetButton2">送信</button>
-                    </div>
-                </div>
-                    <style>
-                        .stopwatch {
-                            font-size: 1.5rem;
-                        }
-                    
-                        .digit {
-                            width: 2rem;
-                            /* 数字の幅を固定 */
-                            text-align: center;
-                            display: inline-block;
-                            margin-right: 5px;
-                        }
-                    </style>
+            </div>
+                <style>
+                    .stopwatch {
+                        font-size: 1.5rem;
+                    }
+                    .digit {
+                        width: 2rem;
+                        /* 数字の幅を固定 */
+                        text-align: center;
+                        display: inline-block;
+                        margin-right: 5px;
+                    }
+                </style>
         </div>
+        </div>
+    <!-- カウンター -->
         <div class="counter">
-                <div class="row justify-content-center">
+                <div class="row justify-content-center m-0">
                     <div class="col-md-4">
-                        <div class="card text-center bg-secondary">
+                        <div class="rounded text-center bg-secondary">
                             <div class="card-body">
-                                <h2 id="counter" class="text-light">0</h2>
-                                <button id="increment" class="btn btn-primary" style="width: 65px;">+</button>
-                                <button id="decrement" class="btn btn-dark"style="width: 30px;">-</button>
-                                <button id="reset" class="btn btn-danger" style="width: 30px;">/</button>
-                                <button id="submit" class="btn btn-success" style="width: 65px;">送信</button>
+                                <h2 id="counter" class="text-light mt-2">0</h2>
+                                <button id="increment" class="btn btn-primary mt-2" style="width: 65px;">+</button>
+                                <button id="decrement" class="btn btn-dark mt-2"style="width: 30px;">-</button>
+                                <button id="reset" class="btn btn-danger mt-2" style="width: 30px;">/</button>
+                                <button id="submit" class="btn btn-success mt-2" style="width: 65px;">送信</button>
                             </div>
                         </div>
                     </div>
