@@ -88,22 +88,11 @@
             graffffff
                     <p>・表示確認</p>
                     <h1>まんなかコンテンツ</h1>
-                    <div class="form-group">
-                        <label for="a">入力メソッド</label>
-                        <input type="message1" class="form-control" id="test1" placeholder="今日何食べた？">
-                    </div>
-                    <div class="form-group">
-                        <label for="a">入力メソッド</label>
-                        <input type="message2" class="form-control" id="test2" placeholder="好きな本は？">
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" class="btn" value="send" aria-describedby="btn-tip">
-                    </div>
         </div>
 <!-- タイマー -->
         <div class="timer">
     <!-- 時間 -->
-            <span id="current-time" class="badge bg-primary display-4 ms-2" style="width: 230px;">
+            <span id="current-time" class="badge bg-primary display-4 ms-2" style="width: 240px;">
                 <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
             </span>
             
@@ -168,10 +157,16 @@
                 </div>
             
             </div>
+    <!-- フッター -->
         <div class="container footC">
+                                <div class="input-group mt-1">
+                                    <input type="text" class="form-control" placeholder="1行メモ" aria-label="ああ" aria-describedby="ああ">
+                                    <button type="button" class="btn btn-secondary">送信</button>
+                                </div>
+
             <div class="row">
                 <div class="col-sm-12">
-                    <h1>記録ログ</h1>
+                    <b class="text-light">記録ログ</b><br>
                 </div>
             </div>
             <div class="row">
