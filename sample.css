@@ -20,7 +20,7 @@ main {
     grid-area: center;
     display: grid;
         grid-template:
-            "mainG mainG" 45%
+            "mainG mainG" 40%
             "timer counter" 150px
             "footC footC" 1fr
             / 65% 35%;
@@ -75,16 +75,16 @@ aside {
 
 
 .menu-btn2 {
-    position: fixed;
-    top: 10px;
-    right: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
-    height: 60px;
-    width: 60px;
+    height: 5vh;
+    width: 7vh;
     justify-content: center;
     align-items: center;
     z-index: 90;
-    background-color: gray;
+    background-color: rgb(0, 0, 0);
 }
 
 .menu-btn2 span,
@@ -176,7 +176,7 @@ aside {
     right: -100%;
     /*leftの値を変更してメニューを画面外へ*/
     z-index: 80;
-    background-color: #008830;
+    background-color: #353535;
     transition: all 0.2s;
     /*アニメーション設定*/
 }
@@ -190,12 +190,12 @@ aside {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 .menu-btn1 {
-    position: fixed;
-    top: 10px;
-    left: 10px;
+position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
-    height: 60px;
-    width: 60px;
+    height: 5vh;
+    width: 7vh;
     justify-content: center;
     align-items: center;
     z-index: 90;
