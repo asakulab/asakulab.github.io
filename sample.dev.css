@@ -1,13 +1,14 @@
 /* PC向け配置 */
 body {
+    max-width: 700px;
     min-height: 100vh;
     width: 100%;
     margin: 10% auto;
     display: grid;
     grid-template:
-        "header header header" 5%
-        "left   center right " 1fr
-        / 20% 60% 20%;
+        "header header header" 5vh
+        "nav    main   aside " 95vh
+        / 20vw 60vw 20vw;
 }
 
 /* gridの中身 */
@@ -17,7 +18,7 @@ header {
     position: relative;
 }
 main {
-    grid-area: center;
+    grid-area: main;
     display: grid;
         grid-template:
             "mainG mainG" 40%
@@ -26,11 +27,11 @@ main {
             / 65% 35%;
 }
 nav {
-    grid-area: left;
+    grid-area: nav;
     background-color: #00FF0050;
 }
 aside {
-    grid-area: right;
+    grid-area: aside;
     background-color: #0000FF50;
 }
 .maingG {
@@ -54,20 +55,32 @@ aside {
 @media not (min-aspect-ratio: 1) {
     body {
         grid-template:
-            "header" 5%
-            "center" 1fr
-            "left  " 
-            "right " 
+            "header header" 3vh
+            "main   main  " 50vh
+            "nav    aside " 25vh
+            "footer footer" 22vh
+            / 50% 50%; 
     }
     nav {
-        grid-area: left;
+        grid-area: nav;
         background-color: #00FF0050;
-        display: none;
     }
     aside {
-        grid-area: right;
+        grid-area: aside;
         background-color: #0000FF50;
-        display: none;
+    }
+    footer {
+        grid-area: footer;
+        background-color: #ff000d50;
+    }
+    .bottom {
+        position:fixed;
+        top: 93vh;
+        height: 7vh;
+        width: 100vw;
+        background-color: #ffffff;
+        z-index: 50;
+        box-shadow: 0px -1vh 1vh rgba(0, 0, 0, 0.2);
     }
 }
 
@@ -190,7 +203,7 @@ aside {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 .menu-btn1 {
-position: absolute;
+    position: absolute;
     top: 0;
     left: 0;
     display: flex;
@@ -301,17 +314,6 @@ position: absolute;
     /*メニューを画面内へ*/
 }
 
-
-
-.dekamoji {
-    font-size: 30px;
-    /* 水平・垂直方向の中央揃え */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -25px 0 0 -100px;
-    /* 完全に中央に配置するため、上・左の margin を負の数に設定 */
-}
 
 /* グラフ用 */
 #chartContainer {
