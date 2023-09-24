@@ -1,13 +1,13 @@
 /* PC向け配置 */
 body {
     max-width: 700px;
-    min-height: 100vh;
+    min-height: 100svh;
     width: 100%;
     margin: 10% auto;
     display: grid;
     grid-template:
-        "header header header" 5vh
-        "nav    main   aside " 95vh
+        "header header header" 5svh
+        "nav    main   aside " 95svh
         / 20vw 60vw 20vw;
 }
 
@@ -55,10 +55,10 @@ aside {
 @media not (min-aspect-ratio: 1) {
     body {
         grid-template:
-            "header header" 3vh
-            "main   main  " 50vh
-            "nav    aside " 25vh
-            "footer footer" 22vh
+            "header header" 3svh
+            "main   main  " 50svh
+            "nav    aside " 25svh
+            "footer footer" 22svh
             / 50% 50%; 
     }
     nav {
@@ -75,12 +75,12 @@ aside {
     }
     .bottom {
         position:fixed;
-        top: 93vh;
-        height: 7vh;
-        width: 100vw;
+        top: 93svh;
+        height: 7svh;
+        width: 100svw;
         background-color: #ffffff;
         z-index: 50;
-        box-shadow: 0px -1vh 1vh rgba(0, 0, 0, 0.2);
+        box-shadow: 0px -1svh 1svh rgba(0, 0, 0, 0.2);
     }
 }
 
@@ -92,8 +92,8 @@ aside {
     top: 0;
     right: 0;
     display: flex;
-    height: 5vh;
-    width: 7vh;
+    height: 5svh;
+    width: 7svh;
     justify-content: center;
     align-items: center;
     z-index: 90;
@@ -207,8 +207,8 @@ aside {
     top: 0;
     left: 0;
     display: flex;
-    height: 5vh;
-    width: 7vh;
+    height: 5svh;
+    width: 7svh;
     justify-content: center;
     align-items: center;
     z-index: 90;
