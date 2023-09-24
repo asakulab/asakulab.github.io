@@ -2,11 +2,17 @@ let counterValue = 0;
 
 const counterDisplay = document.getElementById("counter");
 const incrementButton = document.getElementById("increment");
+const incrementButton10 = document.getElementById("increment10");
 const decrementButton = document.getElementById("decrement");
 const resetButton = document.getElementById("reset");
 
 incrementButton.addEventListener("click", function () {
     counterValue++;
+    updateCounterDisplay();
+});
+
+incrementButton10.addEventListener("click", function () {
+    counterValue+= 10;
     updateCounterDisplay();
 });
 

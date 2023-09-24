@@ -56,8 +56,8 @@ aside {
     body {
         grid-template:
             "header header" 3svh
-            "main   main  " 50svh
-            "nav    aside " 25svh
+            "main   main  " 35svh
+            "nav    aside " 40svh
             "footer footer" 22svh
             / 50% 50%; 
     }
