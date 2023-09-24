@@ -1,25 +1,30 @@
+import React, { useState } from 'react'
 import logo from './logo.svg';
 import './App.css';
 
+function AlertMessage() {
+  return <div className="alert alert-primary h5 text-primary">
+    This is Alert message!
+  </div>
+}
+
+function CardMessage() {
+  return <div className="card p-3 h5 border-primary text-center">
+      This is Card message!
+    </div>
+}
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 className="bg-primary text white display-4">React</h1>
+      <div className="container">
+        <h4 className="my-3">Hooks sample</h4>
+        <AlertMessage />
+        <CardMessage />
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;
