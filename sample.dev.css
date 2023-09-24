@@ -19,12 +19,6 @@ header {
 }
 main {
     grid-area: main;
-    display: grid;
-        grid-template:
-            "mainG mainG" 40%
-            "timer counter" 150px
-            "footC footC" 1fr
-            / 65% 35%;
 }
 nav {
     grid-area: nav;
@@ -34,22 +28,7 @@ aside {
     grid-area: aside;
     background-color: #0000FF50;
 }
-.maingG {
-        grid-area: mainG;
-        background-color: #7cdaff;
-}
-.timer {
-    grid-area: timer;
-    /* background-color: #fff27c; */
-}
-.counter {
-    grid-area: counter;
-    /* background-color: #7cffae; */
-}
-.footC {
-    grid-area: footC;
-    /* background-color: #3022aa; */
-}
+
 
 /* スマホ仕様配置および変更 */
 @media not (min-aspect-ratio: 1) {
@@ -84,8 +63,31 @@ aside {
     }
 }
 
+/* グラフ用 */
+#chartContainer {
+    top: 10%;
+    left: 25%;
+    width: 50%;
+    height: 40%;
+}
+
+@media not (min-aspect-ratio: 1) {
+    #chartContainer {
+        top: 10%;
+        left: 5%;
+        width: 100vw;
+        height: 25svh;
+    }
+}
+
+.bottomTub {
+    position: fixed;
+    top: 85%;
+    height: 10%;
+}
 
 
+/* ボタン */
 
 .menu-btn2 {
     position: absolute;
@@ -315,26 +317,3 @@ aside {
 }
 
 
-/* グラフ用 */
-#chartContainer {
-    position: fixed;
-    top: 10%;
-    left: 25%;
-    width: 50%;
-    height: 40%;
-}
-@media not (min-aspect-ratio: 1) {
-    #chartContainer {
-        position: absolute;
-        top: 10%;
-        left: 5%;
-        width: 90%;
-        height: 30%;
-    }
-}
-
-.bottomTub{
-    position: fixed;
-    top: 85%;
-    height: 10%;
-}
