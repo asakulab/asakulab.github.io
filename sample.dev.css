@@ -75,12 +75,12 @@ aside {
     }
     .bottom {
         position:fixed;
-        top: 93svh;
-        height: 7svh;
+        top: 93dvh;
+        height: 7dvh;
         width: 100svw;
         background-color: #ffffff;
         z-index: 50;
-        box-shadow: 0px -1svh 1svh rgba(0, 0, 0, 0.2);
+        box-shadow: 0px -1dvh 1dvh rgba(0, 0, 0, 0.2);
     }
 }
 
