@@ -1,0 +1,321 @@
+/* PC向け配置 */
+body {
+    max-width: 700px;
+    min-height: 100svh;
+    width: 100%;
+    margin: 10% auto;
+    display: grid;
+    grid-template:
+        "header header header" 5svh
+        "nav    main   aside " 95svh
+        / 20vw 60vw 20vw;
+}
+
+/* gridの中身 */
+header {
+    grid-area: header;
+    background-color: #C0C0C0;
+    position: relative;
+}
+main {
+    grid-area: main;
+}
+nav {
+    grid-area: nav;
+    /* background-color: #00FF0050; */
+}
+aside {
+    grid-area: aside;
+    /* background-color: #0000FF50; */
+}
+
+
+/* スマホ仕様配置および変更 */
+@media not (min-aspect-ratio: 1) {
+    body {
+        grid-template:
+            "header header" 3svh
+            "main   main  " 37svh
+            "nav    aside " 38svh
+            "footer footer" 22svh
+            / 50% 50%; 
+    }
+    nav {
+        grid-area: nav;
+        /* background-color: #00FF0050; */
+    }
+    aside {
+        grid-area: aside;
+        /* background-color: #0000ff6c; */
+    }
+    footer {
+        grid-area: footer;
+        /* background-color: #ff000d50; */
+    }
+    .bottom {
+        position:fixed;
+        top: 93dvh;
+        height: 7dvh;
+        width: 100svw;
+        background-color: #ffffff;
+        z-index: 50;
+        box-shadow: 0px -1dvh 1dvh rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* おえかき */
+/* style.css */
+
+canvas {
+    border: 2px solid #000;
+}
+
+#controls {
+    margin-top: 10px;
+    display: flex;
+}
+
+input[type="color"],
+input[type="range"] {
+    margin-right: 10px;
+}
+
+
+/* ボタン */
+
+input[type="checkbox"]:checked~ .btn-back {
+    position: absolute;
+    z-index: 95;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.menu-btn2 {
+    position: absolute;
+    top: 0svh;
+    right: 0vw;
+    display: flex;
+    height: 5svh;
+    width: 7svh;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: rgb(0, 0, 0);
+}
+
+.menu-btn2 span,
+.menu-btn2 span:before,
+.menu-btn2 span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+}
+
+.menu-btn2 span:before {
+    bottom: 8px;
+}
+
+.menu-btn2 span:after {
+    top: 8px;
+}
+
+#menu-btn2-check:checked~.menu-btn2 span {
+    background-color: rgba(255, 255, 255, 0);
+    /*メニューオープン時は真ん中の線を透明にする*/
+}
+
+#menu-btn2-check:checked~.menu-btn2 span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#menu-btn2-check:checked~.menu-btn2 span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#menu-btn2-check {
+    display: none;
+}
+
+.menu-content2 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #3584bb;
+}
+
+.menu-content2 ul {
+    padding: 70px 10px 0;
+}
+
+.menu-content2 ul li {
+    border-bottom: solid 1px #000000;
+    list-style: none;
+}
+
+.menu-content2 ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #000000;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+
+.menu-content2 ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #000000;
+    border-right: solid 2px #000000;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+
+.menu-content2 {
+    width: 70%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /*leftの値を変更してメニューを画面外へ*/
+    z-index: 200;
+    background-color: rgb(250, 250, 250);
+    transition: all 0.2s;
+    /*アニメーション設定*/
+}
+
+#menu-btn2-check:checked~.menu-content2 {
+    right: 0;
+    /*メニューを画面内へ*/
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.menu-btn1 {
+    position: absolute;
+    top: 0svh;
+    left: 0svh;
+    display: flex;
+    height: 5svh;
+    width: 7svh;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: gray;
+}
+
+.menu-btn1 span,
+.menu-btn1 span:before,
+.menu-btn1 span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+}
+
+.menu-btn1 span:before {
+    bottom: 8px;
+}
+
+.menu-btn1 span:after {
+    top: 8px;
+}
+
+#menu-btn1-check:checked~.menu-btn1 span {
+    background-color: rgba(255, 255, 255, 0);
+    /*メニューオープン時は真ん中の線を透明にする*/
+}
+
+#menu-btn1-check:checked~.menu-btn1 span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#menu-btn1-check:checked~.menu-btn1 span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#menu-btn1-check {
+    display: none;
+}
+
+.menu-content1 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    background-color: #3584bb;
+}
+
+.menu-content1 ul {
+    padding: 70px 10px 0;
+}
+
+.menu-content1 ul li {
+    border-bottom: solid 1px #000000;
+    list-style: none;
+}
+
+.menu-content1 ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #000000;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+
+.menu-content1 ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #000000;
+    border-right: solid 2px #000000;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+
+.menu-content1 {
+    width: 70%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    /*leftの値を変更してメニューを画面外へ*/
+    z-index: 100;
+    background-color: rgb(250, 250, 250);
+    transition: all 0.2s;
+    /*アニメーション設定*/
+}
+
+#menu-btn1-check:checked~.menu-content1 {
+    left: 0;
+    /*メニューを画面内へ*/
+}
+
+
