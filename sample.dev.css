@@ -91,8 +91,8 @@ aside {
 
 .menu-btn2 {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 73svh;
+    right: 50vw;
     display: flex;
     height: 5svh;
     width: 7svh;
@@ -206,7 +206,7 @@ aside {
 
 .menu-btn1 {
     position: absolute;
-    top: 0;
+    top: 73svh;
     left: 0;
     display: flex;
     height: 5svh;
