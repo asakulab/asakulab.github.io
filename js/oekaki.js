@@ -1,56 +1,73 @@
-let canvas = document.getElementById("drawArea");
-let ctx = canvas.getContext("2d");
-let drawing = false;
+// キャンバス要素を取得
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-// 線の設定
-ctx.lineWidth = 5;
-ctx.lineJoin = 'round';
-ctx.lineCap = 'round';
-ctx.strokeStyle = 'black';
+// 線の初期設定
+let lineWidth = 5;
+let lineColor = "#000000";
 
-// マウス操作のイベント
-canvas.addEventListener("mousedown", startDrawing);
-canvas.addEventListener("mouseup", stopDrawing);
-canvas.addEventListener("mouseout", stopDrawing);  // 追加: キャンバス外に出たときのイベント
+// タッチイベントをリスン
+canvas.addEventListener("touchstart", startPosition);
+canvas.addEventListener("touchend", endPosition);
+canvas.addEventListener("touchmove", draw);
+
+// クリックイベントをリスン
+canvas.addEventListener("mousedown", startPosition);
+canvas.addEventListener("mouseup", endPosition);
 canvas.addEventListener("mousemove", draw);
 
-// タッチ操作のイベント
-canvas.addEventListener("touchstart", (e) => { 
+// ドラッグ操作を無効化
+canvas.addEventListener("mousedown", function (e) {
     e.preventDefault();
-    startDrawing();
-});
-canvas.addEventListener("touchend", (e) => {
-    e.preventDefault();
-    stopDrawing();
-});
-canvas.addEventListener("touchmove", function(e) {
-    e.preventDefault();  // 追加: タッチ操作のデフォルト動作を抑制
-    let touch = e.touches[0];
-    draw({clientX: touch.clientX, clientY: touch.clientY});
 });
 
-function startDrawing() {
-    drawing = true;
+// スワイプ操作を無効化
+canvas.addEventListener("touchstart", function (e) {
+    e.preventDefault();
+});
+
+// 線の太さを調整する input 要素の変更イベントをリスン
+const lineWidthInput = document.getElementById("lineWidth");
+lineWidthInput.addEventListener("input", function () {
+    lineWidth = parseInt(this.value, 10);
+});
+
+// 線の色を調整する input 要素の変更イベントをリスン
+const lineColorInput = document.getElementById("lineColor");
+lineColorInput.addEventListener("input", function () {
+    lineColor = this.value;
+});
+
+let painting = false;
+
+function startPosition(e) {
+    painting = true;
+    draw(e);
 }
 
-function stopDrawing() {
-    drawing = false;
+function endPosition() {
+    painting = false;
     ctx.beginPath();
 }
 
-function draw(event) {
-    if (!drawing) return;
+function draw(e) {
+    if (!painting) return;
 
-    ctx.lineWidth = 5;
+    ctx.lineWidth = lineWidth;
     ctx.lineCap = "round";
+    ctx.strokeStyle = lineColor;
 
-    ctx.lineTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+    const rect = canvas.getBoundingClientRect();
+    const x = (e.touches[0].clientX - rect.left) * (canvas.width / rect.width);
+    const y = (e.touches[0].clientY - rect.top) * (canvas.height / rect.height);
+
+    ctx.lineTo(x, y);
     ctx.stroke();
-
     ctx.beginPath();
-    ctx.moveTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+    ctx.moveTo(x, y);
 }
 
-
-canvas.width = canvas.offsetWidth;
-canvas.height = canvas.offsetHeight;
+const clearBtn = document.getElementById("clearBtn");
+clearBtn.addEventListener("click", function () {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+});

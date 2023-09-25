@@ -64,18 +64,18 @@ aside {
 /* おえかき */
 /* style.css */
 
+.container {
+    text-align: center;
+}
+
 canvas {
-    border: 2px solid #000;
+    border: 1px solid #000;
+    touch-action: none;
+    /* スワイプによるスクロールを無効化 */
 }
 
-#controls {
-    margin-top: 10px;
-    display: flex;
-}
-
-input[type="color"],
-input[type="range"] {
-    margin-right: 10px;
+.controls {
+    margin-top: 20px;
 }
 
 
