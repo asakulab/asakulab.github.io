@@ -49,3 +49,18 @@ document.getElementById('clearButton').addEventListener('click', function() {
 
 canvas.width = canvas.offsetWidth;
 canvas.height = canvas.offsetHeight;
+
+// タッチ操作のイベント
+canvas.addEventListener("touchstart", (e) => { 
+    e.preventDefault();  // これを追加
+    startDrawing();
+});
+canvas.addEventListener("touchend", (e) => {
+    e.preventDefault();
+    stopDrawing();
+});
+canvas.addEventListener("touchmove", function(e) {
+    e.preventDefault();  // これは既にあるはず
+    let touch = e.touches[0];
+    draw({clientX: touch.clientX, clientY: touch.clientY});
+});
