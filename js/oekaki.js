@@ -34,3 +34,21 @@ function draw(e) {
 clearButton.addEventListener('click', () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
+
+
+canvas.addEventListener('touchstart', () => {
+    drawing = true;
+    ctx.beginPath();
+});
+
+canvas.addEventListener('touchend', () => {
+    drawing = false;
+    ctx.closePath();
+});
+
+canvas.addEventListener('touchmove', draw);
+
+ctx.lineTo(e.touches[0].clientX - canvas.getBoundingClientRect().left, e.touches[0].clientY - canvas.getBoundingClientRect().top);
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
