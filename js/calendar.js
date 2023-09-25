@@ -30,7 +30,7 @@ function generateCalendar(month, year) {
 }
 
 function handleDateClick(tdElement) {
-    tdElement.innerHTML = '<img src="https://pictogram2.com/p/p0015/i/m.png" alt="選択した日付" width="30px">';
+    tdElement.innerHTML = '<img src="https://pictogram2.com/p/p0015/i/m.png" alt="選択した日付" width="45px">';
 }
 
 function changeMonth(direction) {
