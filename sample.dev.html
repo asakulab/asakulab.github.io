@@ -143,10 +143,6 @@
         </div>
 
         <div class="container footC">
-            <div class="input-group mt-1">
-                <input type="text" class="form-control" placeholder="1行メモ" aria-label="ああ" aria-describedby="ああ">
-                <button type="button" class="btn btn-secondary">送信</button>
-            </div>
             <div class="row">
                 <div class="col-sm-12">
                     <ul class="m-0" style="display:flex; list-style:none;">　
@@ -171,12 +167,26 @@
                     </ul>
                 </div>
             </div>
+            <div class="input-group mt-1">
+                <input type="text" class="form-control" placeholder="1行メモ" aria-label="ああ" aria-describedby="ああ">
+                <button type="button" class="btn btn-secondary">送信</button>
+            </div>
         </div>
     </main>
 
 
 <!-- ナビ -->
     <nav>
+        <div class="text-center mb-1">
+            <div class="btn-group" role="group" aria-label="ラベル" style="width: 100%;">
+                <input type="radio" class="btn-check" name="radio" id="radio1" autocomplete="off" checked>
+                <label class="btn btn-outline-secondary" for="radio1">設定1</label>
+                <input type="radio" class="btn-check" name="radio" id="radio2" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="radio2">設定2</label>
+                <input type="radio" class="btn-check" name="radio" id="radio3" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="radio3">設定3</label>
+            </div>
+        </div>
         <div class="card-body shadow rounded text-center bg-secondary">
         <!-- タイマー -->
             <div class="timer">
@@ -250,6 +260,16 @@
 <!-- アサイド -->
     <aside>
 <!-- カウンター -->
+        <div class="text-center mb-1">
+            <div class="btn-group" role="group1" aria-label="ラベル1" style="width: 90%;">
+                <input type="radio" class="btn-check" name="radio1" id="radio4" autocomplete="off" checked>
+                <label class="btn btn-outline-dark" for="radio4">行動</label>
+                <input type="radio" class="btn-check" name="radio1" id="radio5" autocomplete="off">
+                <label class="btn btn-outline-dark" for="radio5">時間</label>
+                <input type="radio" class="btn-check" name="radio1" id="radio6" autocomplete="off">
+                <label class="btn btn-outline-dark" for="radio6">気分</label>
+            </div>
+        </div>
         <div class="counter text-center">
             <div class="row justify-content-center m-0">
                 <div class="col-md-4">

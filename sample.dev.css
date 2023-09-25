@@ -35,8 +35,8 @@ aside {
     body {
         grid-template:
             "header header" 3svh
-            "main   main  " 35svh
-            "nav    aside " 40svh
+            "main   main  " 37svh
+            "nav    aside " 38svh
             "footer footer" 22svh
             / 50% 50%; 
     }
@@ -91,8 +91,8 @@ aside {
 
 .menu-btn2 {
     position: absolute;
-    top: 73svh;
-    right: 50vw;
+    top: 0svh;
+    right: 0vw;
     display: flex;
     height: 5svh;
     width: 7svh;
@@ -206,8 +206,8 @@ aside {
 
 .menu-btn1 {
     position: absolute;
-    top: 73svh;
-    left: 0;
+    top: 0svh;
+    left: 0svh;
     display: flex;
     height: 5svh;
     width: 7svh;
