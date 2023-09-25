@@ -177,54 +177,57 @@
 
 <!-- ナビ -->
     <nav>
-    <!-- タイマー -->
-        <div class="timer">
-    <!-- 時間 -->
-            <span id="current-time" class="badge bg-primary display-4 ms-2" style="width: 96%;">
-                <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
-            </span>   
-            <style>
-                #current-time {
-                    font-size: 5svh;
-                    padding: 1svh 1svh;
-                    display: inline-block;
-                    text-align: center;
-                    white-space: nowrap;
-                    overflow: hidden;
-                }    
-                #hours,
-                #minutes,
-                #seconds {
-                    width: 60px;
-                /* 数字の幅を一定に設定 */
-                    display: inline-block;
-                }
-            </style>
-    <!-- ストップウォッチ -->
-            <div class="container ms-3">
-                <div class="stopwatch badge bg-info display-4 ms-1" style="width: 190px;">
-                    <span class="digit" id="hoursDisplay">00</span> :
-                    <span class="digit" id="minutesDisplay">00</span> :
-                    <span class="digit" id="secondsDisplay">00</span>
+        <div class="card-body shadow rounded text-center bg-secondary">
+        <!-- タイマー -->
+            <div class="timer">
+        <!-- 時間 -->
+                <span id="current-time" class="badge shadow bg-light text-dark mt-1" style="width: 95%;">
+                    <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+                </span>   
+                <style>
+                    #current-time {
+                        font-size: 4svh;
+                        font-family: "Century";
+                        padding: 1svh 0svh;
+                        display: inline-block;
+                        text-align: center;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }    
+                    #hours,
+                    #minutes,
+                    #seconds {
+                        width: 40px;
+                    /* 数字の幅を一定に設定 */
+                        display: inline-block;
+                    }
+                </style>
+        <!-- ストップウォッチ -->
+                <div class="container text-center">
+                    <div class="stopwatch badge bg-secondary display-4 mb-2" style="width: 45vw;">
+                        <span class="digit" id="hoursDisplay">00</span> h/
+                        <span class="digit" id="minutesDisplay">00</span> m/
+                        <span class="digit" id="secondsDisplay">00</span> s/
+                    </div>
+                <div>
+                    <button class="btn btn-primary" id="startButton" style="width: 10vw;">始</button>
+                    <button class="btn btn-danger" id="stopButton" style="width: 10vw;">終</button>
+                    <button class="btn btn-warning" id="resetButton" style="width: 10vw;">修</button>
+                    <button class="btn btn-success" id="resetButton2" style="width: 10vw;">送</button>
                 </div>
-            <div>
-                <button class="btn btn-primary" id="startButton">始</button>
-                <button class="btn btn-danger" id="stopButton">終</button>
-                <button class="btn btn-warning" id="resetButton">リセ</button>
-                <button class="btn btn-success" id="resetButton2">送信</button>
+                <style>
+                    .stopwatch {
+                        font-size: 2svh;
+                    }
+                    .digit {
+                        width: 2svh;
+                    /* 数字の幅を固定 */
+                        text-align: center;
+                        display: inline-block;
+                        margin-right: 0svh;
+                    }
+                </style>
             </div>
-            <style>
-                .stopwatch {
-                    font-size: 2svh;
-                }
-                .digit {
-                    width: 2svh;
-                /* 数字の幅を固定 */
-                    text-align: center;
-                    display: inline-block;
-                    margin-right: 0svh;
-                }
-            </style>
         </div>
     </nav>
 
@@ -232,12 +235,12 @@
 <!-- アサイド -->
     <aside>
 <!-- カウンター -->
-        <div class="counter">
+        <div class="counter text-center">
             <div class="row justify-content-center m-0">
                 <div class="col-md-4">
                     <div class="rounded text-center bg-secondary">
-                        <div class="card-body">
-                            <h2 id="counter" class="text-light mt-2 pt-3">0</h2>
+                        <div class="card-body shadow">
+                            <h2 id="counter" class="text-light pt-3">0</h2>
                             <button id="increment10" class="btn btn-primary mt-2" style="width: 19svh;">+10</button><br>
                             <button id="decrement" class="btn btn-dark mt-2" style="width: 6svh;">-</button>
                             <button id="reset" class="btn btn-danger mt-2" style="width: 6svh;">/</button>

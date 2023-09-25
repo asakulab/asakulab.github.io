@@ -22,11 +22,11 @@ main {
 }
 nav {
     grid-area: nav;
-    background-color: #00FF0050;
+    /* background-color: #00FF0050; */
 }
 aside {
     grid-area: aside;
-    background-color: #0000FF50;
+    /* background-color: #0000FF50; */
 }
 
 
@@ -42,15 +42,15 @@ aside {
     }
     nav {
         grid-area: nav;
-        background-color: #00FF0050;
+        /* background-color: #00FF0050; */
     }
     aside {
         grid-area: aside;
-        background-color: #0000FF50;
+        /* background-color: #0000ff6c; */
     }
     footer {
         grid-area: footer;
-        background-color: #ff000d50;
+        /* background-color: #ff000d50; */
     }
     .bottom {
         position:fixed;
