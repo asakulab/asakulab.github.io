@@ -89,6 +89,14 @@ aside {
 
 /* ボタン */
 
+input[type="checkbox"]:checked~ .btn-back {
+    position: absolute;
+    z-index: 95;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.8);
+}
+
 .menu-btn2 {
     position: absolute;
     top: 0svh;
@@ -147,7 +155,7 @@ aside {
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 80;
+    z-index: 100;
     background-color: #3584bb;
 }
 
@@ -156,7 +164,7 @@ aside {
 }
 
 .menu-content2 ul li {
-    border-bottom: solid 1px #ffffff;
+    border-bottom: solid 1px #000000;
     list-style: none;
 }
 
@@ -165,7 +173,7 @@ aside {
     width: 100%;
     font-size: 15px;
     box-sizing: border-box;
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     padding: 9px 15px 10px 0;
     position: relative;
@@ -175,8 +183,8 @@ aside {
     content: "";
     width: 7px;
     height: 7px;
-    border-top: solid 2px #ffffff;
-    border-right: solid 2px #ffffff;
+    border-top: solid 2px #000000;
+    border-right: solid 2px #000000;
     transform: rotate(45deg);
     position: absolute;
     right: 11px;
@@ -190,8 +198,8 @@ aside {
     top: 0;
     right: -100%;
     /*leftの値を変更してメニューを画面外へ*/
-    z-index: 80;
-    background-color: #353535;
+    z-index: 200;
+    background-color: rgb(250, 250, 250);
     transition: all 0.2s;
     /*アニメーション設定*/
 }
@@ -271,7 +279,7 @@ aside {
 }
 
 .menu-content1 ul li {
-    border-bottom: solid 1px #ffffff;
+    border-bottom: solid 1px #000000;
     list-style: none;
 }
 
@@ -280,7 +288,7 @@ aside {
     width: 100%;
     font-size: 15px;
     box-sizing: border-box;
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     padding: 9px 15px 10px 0;
     position: relative;
@@ -290,8 +298,8 @@ aside {
     content: "";
     width: 7px;
     height: 7px;
-    border-top: solid 2px #ffffff;
-    border-right: solid 2px #ffffff;
+    border-top: solid 2px #000000;
+    border-right: solid 2px #000000;
     transform: rotate(45deg);
     position: absolute;
     right: 11px;
@@ -305,8 +313,8 @@ aside {
     top: 0;
     left: -100%;
     /*leftの値を変更してメニューを画面外へ*/
-    z-index: 80;
-    background-color: black;
+    z-index: 100;
+    background-color: rgb(250, 250, 250);
     transition: all 0.2s;
     /*アニメーション設定*/
 }
