@@ -2,151 +2,140 @@
 <html lang="ja">
 
 <head>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="sample.dev.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <title>Document</title>
+    <title>開発ページ</title>
+
 </head>
 
 <body>
+
+
+    <div class="hamburger-menu1">
+        <input type="checkbox" id="menu-btn1-check">
+        <label for="menu-btn1-check" class="menu-btn1 btn-back"><span></span></label>
+        <!--ここからメニュー-->
+        <div class="menu-content1">
+            <ul>
+                <li>
+                    <a href="#">
+                        <h1>🏠ホーム</h1>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h1>コンテンツ</h1>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">リンク</a>
+                </li>
+                <li>
+                    <a href="#">開発ブログ</a>
+                </li>
+            </ul>
+        </div>
+        <!-- ここまでメニュー -->
+    </div>
+
+
+    <!-- ヘッダー -->
     <header>
-        <div class="hamburger-menu2">
-            <input type="checkbox" id="menu-btn2-check">
-            <label for="menu-btn2-check" class="menu-btn2"><span></span></label>
-            <!--ここからメニュー-->
-            <div class="menu-content2">
-                <ul>
-                    <li>
-                        <a href="#">ログイン</a>
-                    </li>
-                    <li>
-                        <a href="#">リンク</a>
-                    </li>
-                    <li>
-                        <h3>
-                            <div class="form-group">
-                                <label for="a">入力メソッド</label>
-                                <input type="message1" class="form-control" id="test1" placeholder="今日何食べた？">
-                            </div>
-                            <div class="form-group">
-                                <label for="a">
-                                    <h3>なんでも📝</h3>
-                                </label>
-                                <input type="message2" class="form-control" id="test2" style="height: 200px">
-                            </div>
-                            　 <div class="form-group">
-                                <input type="submit" class="btn bg-danger" value="送信" aria-describedby="btn-tip">
-                            </div>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" value="" id="check1">
-                                <label class="form-check-label" for="check1"></label>カウント
-                            </div>
-                        </h3>
-                    </li>
-                </ul>
-            </div>
-            <!--ここまでメニュー-->
-        </div>
-
-        <div class="hamburger-menu1">
-            <input type="checkbox" id="menu-btn1-check">
-            <label for="menu-btn1-check" class="menu-btn1"><span></span></label>
-            <!--ここからメニュー-->
-            <div class="menu-content1">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <h1>🏠ホーム</h1>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <h1>コンテンツ</h1>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">リンク</a>
-                    </li>
-                    <li>
-                        <a href="#">開発ブログ</a>
-                    </li>
-                </ul>
-            </div>
-            <!--ここまでメニュー-->
-        </div>
-
-
-
-        <div class="dekamoji center-block">おいしいあさくら</div>
-        <img class="oishiiasakura center-block" src="./img/front.png" alt="おいしいあさくら" />
+        <div class="text-center">サンプルページ</div>
     </header>
-    <nav>left</nav>
+
+    <!-- メイン -->
+
     <main>
-        <p>・表示確認</p>
-        <h1>まんなかコンテンツ</h1>
-        <div class="form-group">
-            <label for="a">入力メソッド</label>
-            <input type="message1" class="form-control" id="test1" placeholder="今日何食べた？">
-        </div>
-        <div class="form-group">
-            <label for="a">入力メソッド</label>
-            <input type="message2" class="form-control" id="test2" placeholder="好きな本は？">
-        </div>
-        <div class="form-group">
-            <input type="submit" class="btn" value="send" aria-describedby="btn-tip">
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h1>記録ログ</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                </div>
-                <div class="col-sm-12">
-                    <table class="table table-striped">
-                        <thead class="table-dark">
-                            <tr>
-                                <th scope="col">No.</th>
-                                <th scope="col">Time</th>
-                                <th scope="col">Memo</th>
-                                <th scope="col">Check</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="col">1</th>
-                                <th scope="col">3 m</th>
-                                <th scope="col">3分待った</th>
-                                <th scope="col">☑</th>
-                            </tr>
-                        </tbody>
-                        <tbody class="table-light">
-                            <tr>
-                                <th scope="col">2</th>
-                                <th scope="col">7 m</th>
-                                <th scope="col">7分待った</th>
-                                <th scope="col">☑</th>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <th scope="col">3</th>
-                                <th scope="col">0 m</th>
-                                <th scope="col">待てなかった</th>
-                                <th scope="col">□</th>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+        <img class="oishiiasakura center-block" src="./img/front.png" alt="おいしいあさくら" style="width: 100%;" />
+        <div class="card text-center m-3 shadow">
+            <h1 class="card-body ustify-content-center bg">Webページを開発していく<br>スタイル</h1>
         </div>
     </main>
-    <aside>right</aside>
-    <footer>footer</footer>
+
+
+    <!-- ナビ -->
+    <nav>
+        <img class="oishiiasakura center-block" src="./img/1.png" alt="おいしいあさくら" style="width: 100%;" />
+    </nav>
+
+
+    <!-- アサイド -->
+    <aside>
+        <!-- カウンター -->
+        <div class="counter text-center">
+            <div class="row justify-content-center m-0">
+                <div class="col-md-4">
+                    <div class="rounded text-center bg-secondary">
+                        <div class="card-body shadow text-light">
+                            <h1 class="m-2">更新状況</h1>
+                            <p>2023/09/26<br>ひとまず公開</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <script src="js/sample.js"></script>
+
+    <!-- フッター -->
+    <footer>
+        <div class="text-center">
+            <h1>✌('ω')✌</h1>
+        </div>
+    </footer>
+
+    <!-- ボトムタブ -->
+    <div class="bottom">
+        <div class="buttomTub">
+            <ul class="mt-3" style="text-align: center; list-style: none; display:flex; flex-wrap: nowrap;">
+                <li style="text-align: center; width:100%; fill: #ff9600;">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="4svh"
+                        viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                    </svg>　
+                </li>
+                <li style="text-align: center; width:100%;"><a href="sample.dev.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="4svh"
+                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+
+                        <path
+                            d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z" />
+                    </svg></a>　
+                </li>
+                <li style="text-align: center; width:100%;"><a href="sample.dev2.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="4svh"
+                            viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192h80v56H48V192zm0 104h80v64H48V296zm128 0h96v64H176V296zm144 0h80v64H320V296zm80-48H320V192h80v56zm0 160v40c0 8.8-7.2 16-16 16H320V408h80zm-128 0v56H176V408h96zm-144 0v56H64c-8.8 0-16-7.2-16-16V408h80zM272 248H176V192h96v56z" />
+                        </svg></a>　
+                </li>
+                <li style="text-align: center; width:100%;"><a href="sample.dev3.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="4svh"
+                            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z" />
+                        </svg></a>　
+                </li>
+                <li style="text-align: center; width:100%;">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="4svh"
+                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z" />
+                    </svg>　
+                </li>
+            </ul>
+        </div>
+    </div>
+
 </body>
 
 </html>
+
+
+
