@@ -64,13 +64,8 @@ function validateParticipantID() {
     email = document.getElementById('email-input').value;
     age = document.getElementById('age-input').value;
     gender = document.getElementById('gender-input').value;
-    
-    if (participantID.trim() !== '' && email.trim() !== '' && age.trim() !== '' && gender.trim() !== '') {
-        document.getElementById('participant-id-section').classList.add('hidden');
-        document.getElementById('instructions-section').classList.remove('hidden');
-    } else {
-        showModal('すべての情報を入力してください。');
-    }
+    document.getElementById('participant-id-section').classList.add('hidden');
+    document.getElementById('instructions-section').classList.remove('hidden');
 }
 
 // 警告メッセージを表示するためのモーダルを作成
