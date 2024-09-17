@@ -1,112 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <title>ASAKULAB</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="css/index.css" rel="stylesheet">
-
-
-</head>
-<!-- top nav -->
-<nav class="navbar navbar-dark bg-dark fixed-top">
-    <div class="navbar-brand d-none d-xxl-block">　<i class="bi bi-window-stack"></i> ASAKULAB</div>
-    <div class="navbar-brand d-xxl-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft">　<i
-            class="bi bi-window-stack"></i> ASAKULAB</div>
-    <div class="navbar-brand d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"><i
-            class="bi bi-pencil-square"></i></div>
-</nav>
-<!-- top nav -->
-<!-- bottom nav -->
-<nav class="nav Bnav nav-pills nav-justified fixed-bottom d-md-none">
-    <a class="nav-item nav-link" href="/index.html"><i class="bi bi-house-door icon-large"></i></a>
-    <a class="nav-item nav-link" href="/1.introduction/index.html"><i class="bi bi-1-square-fill icon-large"></i></a>
-    <a class="nav-item nav-link" href="/2.topic1/index.html"><i class="bi bi-2-square-fill icon-large"></i></a>
-    <a class="nav-item nav-link" href="/3.topic2/index.html"><i class="bi bi-3-square-fill icon-large"></i></a>
-    <a class="nav-item nav-link" href="/4.discussion/index.html"><i class="bi bi-4-square-fill icon-large"></i></a>
-    <a class="nav-item nav-link" href="/5.message/index.html"><i class="bi bi-envelope icon-large"></i></a>
-</nav>
-<!-- bottom nav -->
-
-    <div class="container">
-        <div class="row justify-content-center">
-<!-- left column -->
-<div class="d-none d-md-block col-md-auto">
-
-    <div class="container align-items-end">
-        <hr>
-        <div class="row text-left">
-            <a class="nav-item nav-link align-items-center" href="/index.html">
-                <i class="bi bi-house-door icon-large2"></i><span class="d-none d-xxl-inline icon-large fw-bold">　Top
-                    Page</span>
-            </a>
-        </div>
-        <hr>
-        <div class="row text-left">
-            <a class="nav-item nav-link align-items-enter" href="/1.introduction/index.html">
-                <i class="bi bi-1-square-fill icon-large2"></i><span
-                    class="d-none d-xxl-inline icon-large fw-bold">　はじめに</span>
-            </a>
-        </div>
-        <div class="row text-left">
-            <a class="nav-item nav-link align-items-center" href="/2.topic1/index.html">
-                <i class="bi bi-2-square-fill icon-large2"></i><span
-                    class="d-none d-xxl-inline icon-large fw-bold">　話題提供１</span>
-            </a>
-        </div>
-        <div class="row text-left">
-            <a class="nav-item nav-link align-items-center" href="/3.topic2/index.html">
-                <i class="bi bi-3-square-fill icon-large2"></i><span
-                    class="d-none d-xxl-inline icon-large fw-bold">　話題提供２</span>
-            </a>
-        </div>
-        <div class="row text-left">
-            <a class="nav-item nav-link align-items-center" href="/4.discussion/index.html">
-                <i class="bi bi-4-square-fill icon-large2"></i><span
-                    class="d-none d-xxl-inline icon-large fw-bold">　指定討論</span>
-            </a>
-        </div>
-
-        <hr>
-
-        <div class="row text-left">
-            <a class="nav-item nav-link align-items-center" href="/5.message/index.html">
-                <i class="bi bi-envelope icon-large2"></i><span class="d-none d-xxl-inline icon-large fw-bold">　メッセージ</span>
-            </a>
-        </div>
-
-        <hr>
-
-        <div class="row text-left">
-            <a class="nav-item nav-link align-items-center" href="/6.task/index.html">
-                <i class="bi bi-controller icon-large2"></i><span
-                    class="d-none d-xxl-inline icon-large fw-bold">　課題体験</span>
-            </a>
-        </div>
-
-        <br><br>
-        <div class="d-none d-xxl-block text-center">
-            <div class="card bg-light" style="width: 150px; height: 150px;">
-                <div class="card-body text-center">
-                    <img src="/img/QR.png" class="img-fluid" alt="QRcode" style="width: 120px; height: 120px;">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- left column -->
-
-<!-- main -->
-            <div class="col">
-                <p>a</p>
-            </div>
-<!-- main -->
-
-<!-- right column -->
-<div class="d-none d-lg-block col-lg-3 col-xl-4">
+<div class="rightColumn">
     <div class="text-start">
         <div class="d-flex mt-2 mb-2 p-1 rounded-pill bg-light border justify-content-center fw-bold">
             新着メッセージ</div>
@@ -220,8 +112,7 @@
                     </div>
                 </div>
                 <!-- メッセージ -->
-                <textarea class="messageInput form-control" rows="3" placeholder="メッセージをどうぞ"
-                    autocomplete="off"></textarea>
+                <textarea class="messageInput form-control" rows="3" placeholder="メッセージをどうぞ" autocomplete="off"></textarea>
                 <div class="text-end">
                     <div class="sendButton btn btn-dark rounded-pill fw-bold mt-2">送信する</div>
                 </div>
@@ -238,7 +129,12 @@
         </h4>
         <div class="card-body p-2 m-2 fw-bold">
             <p>09:30 開始・説明</p>
-
+            <p>09:35 RFTについて</p>
+            <p>09:40 朝倉「関係反応と知的能力」</p>
+            <p>10:00 姜「関係反応とストレス反応」</p>
+            <p>10:20 井上「指定討論」</p>
+            <p>10:40 質疑応答</p>
+            <p>11:00 終了</p>
         </div>
     </div>
 
@@ -270,11 +166,3 @@
  -->
 </div>
 </div>
-<!-- right column -->
-        </div>
-    </div>
-<body>
-
-    
-</body>
-</html>
