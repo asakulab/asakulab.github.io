@@ -1,5 +1,19 @@
+a {
+    color: inherit;
+    /* 色を親要素に合わせる */
+    text-decoration: none;
+    /* 下線を削除する */
+}
+
+.max598px {
+    max-width: 598px;
+}
+
 body {
-    padding-top: 56px;
+    background-color: #ffffff;
+}
+
+body {
     padding-bottom: 56px;
     /* Adjust this value if your navbar is taller */
 }
@@ -16,7 +30,6 @@ h3 {
 
 @media (min-width: 768px) {
     body {
-        padding-top: 56px;
         padding-bottom: 0px;
     }
 }
@@ -120,10 +133,6 @@ h3 {
     /* アクティブ時のアイコン色を変更 */
 }
 
-.container {
-    background-color: #ffffff;
-}
-
 .accordion-button:focus,
 .accordion-button:not(.collapsed) {
     box-shadow: none;
@@ -142,6 +151,8 @@ h3 {
     scrollbar-width: none;
     /* Firefoxでスクロールバーを非表示に */
     height: calc(100vh - 56px);
+
+    background-color: #ffffff;
 }
 
 #rightColumn {
